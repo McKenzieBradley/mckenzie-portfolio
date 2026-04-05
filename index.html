@@ -10,15 +10,33 @@
 
   <link rel="stylesheet" href="styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
+  <div id="about-popup" onclick="closeAbout()">
+  <div class="about-content" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="closeAbout()">×</span>
+
+    
+    <p>
+      With 7+ years in the industry, McKenzie has worked in multiple leading salons,
+      working in the fashion and editorial space, and paved her way in the bridal industry.
+    </p>
+    <p>
+    Get in touch via email or on socials for any enquries for both bridal and editorial, or follow
+    the link for salon bookings. 
+    </p>
+
+  </div>
+</div>
 
 <div class="top-bar">
   <div class="star">★</div>
 </div>
 
 <div class="side-left">
+   <a href="javascript:void(0);" onclick="openAbout()">About</a>
   <a href="https://www.instagram.com/hairbymcky" target="_blank">Instagram</a>
   <a href="https://splendidhair.gettimely.com" target="_blank">Salon bookings</a>
 </div>
@@ -32,14 +50,15 @@
 
   <div class="hero-text">
     <h1>Mckenzie<br>Bradley</h1>
-    <a href="portfolio.html" class="arrow">>>></a>
+    <a href="portfolio.html" class="arrow page-link">>>></a>
   </div>
 </div>
 <div class="mobile-links">
+  <a href="javascript:void(0);" onclick="openAbout()">About</a>
   <a href="https://www.instagram.com/hairbymcky" target="_blank">Instagram</a>
   <a href="https://splendidhair.gettimely.com" target="_blank">Book</a>
   <a href="mailto:mckenziebradley@icloud.com">Contact</a>
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>

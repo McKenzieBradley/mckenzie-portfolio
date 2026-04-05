@@ -47,7 +47,6 @@ window.addEventListener('DOMContentLoaded', () => {
   updateArrows();
 
 });
-
 function openLightbox(src) {
   const lightbox = document.getElementById("lightbox");
   const img = document.getElementById("lightbox-img");
@@ -58,4 +57,34 @@ function openLightbox(src) {
 
 function closeLightbox() {
   document.getElementById("lightbox").style.display = "none";
+}
+document.querySelectorAll(".page-link").forEach(link => {
+  link.addEventListener("click", function(e) {
+    const href = this.getAttribute("href");
+
+    e.preventDefault();
+    document.body.classList.add("fade-out");
+
+    setTimeout(() => {
+      window.location = href;
+    }, 300);
+  });
+});
+function openAbout() {
+  const popup = document.getElementById("about-popup");
+  popup.style.display = "block";
+
+  // allow display to apply before adding class
+  setTimeout(() => {
+    popup.classList.add("active");
+  }, 10);
+}
+
+function closeAbout() {
+  const popup = document.getElementById("about-popup");
+  popup.classList.remove("active");
+
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 400);
 }

@@ -419,4 +419,11 @@ body.fade-out {
     border-radius: 12px;
   }
 
+}.about-photo {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px;
 }

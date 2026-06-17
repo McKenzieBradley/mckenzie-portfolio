@@ -9,7 +9,7 @@ body {
 }
 .top-bar {
   position: fixed;
-  top: 0;
+  top: -30px;
   left: 0;
   width: 100%;
   display: flex;
@@ -64,7 +64,7 @@ body {
 
 .hero-text {
   position: absolute;
-  right: 20%;
+  right: 13%;
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
@@ -85,8 +85,8 @@ body {
 
 .arrow {
   position: absolute;
-  right: 50%;
-  top: 90%;
+  right: 40%;
+  top: 75%;
   font-size: 20px;
   text-decoration: none;
   color: black;
@@ -286,9 +286,10 @@ body.fade-out {
   .hero-text {
     position: static;
     transform: none;
-    margin-top: -50px;
+    margin-top: -150px;
   }
 
+  
  @media (max-width: 768px) {
 
   .hero-text h1 {
@@ -426,4 +427,56 @@ body.fade-out {
   object-fit: cover;
   display: block;
   margin: 0 auto 20px;
+}
+.site-logo {
+  width: 500px;
+  height: auto;
+  display: block;
+  margin-left: 100px;
+}
+.portfolio-logo {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin-left: -23px
+}
+.top-bar {
+  top: -50px !important;
+}
+.top-bar a {
+  text-decoration: none;
+}
+.home-top-bar {
+  top: 0 !important;
+}
+.carousel img {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.carousel img:focus {
+  outline: none;
+}
+
+.carousel img::selection {
+  background: transparent;
+}
+.carousel img {
+  -webkit-user-drag: none;
+}
+@media (max-width: 768px) {
+  .site-logo {
+    width: 220px !important;
+    margin-left: 0 !important;
+  }
+
+  .hero-text {
+    margin-top: -100px !important;
+  }
+
+  .arrow {
+    margin-top: -10px !important;
+    font-size: 16px !important;
+  }
 }
